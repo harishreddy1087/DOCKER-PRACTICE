@@ -1,2 +1,2 @@
 FROM alpine:latest
-RUN sudo dnf update -y &&  dnf install nginx -y
+RUN dnf update -y &&  dnf install nginx -y
