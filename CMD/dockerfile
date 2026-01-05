@@ -1,0 +1,6 @@
+FROM alpine:latest
+# Alpine uses 'apk' instead of 'dnf'
+RUN apk add --no-cache nginx
+#RUN	During Build time	Installs software (like apk add nginx).
+#CMD	During Runtime	The command the container executes when you run docker run
+CMD ["nginx", "-g", "daemon off;"]
