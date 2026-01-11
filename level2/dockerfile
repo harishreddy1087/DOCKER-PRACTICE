@@ -7,5 +7,5 @@ ARG BUILD_VERSION
 # PRO TIP: We move the ARG value into an ENV so the app can see it later
 ENV Version=$BUILD_VERSION
 WORKDIR /app
-COPY greet.py
+COPY greet.py .
 CMD["python", "greet.py"]
