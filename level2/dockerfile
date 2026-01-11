@@ -8,4 +8,4 @@ ARG BUILD_VERSION
 ENV Version=$BUILD_VERSION
 WORKDIR /app
 COPY greet.py .
-CMD["python", "greet.py"]
+CMD ["python", "greet.py"]
