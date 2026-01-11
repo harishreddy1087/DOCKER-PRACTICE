@@ -1,8 +1,15 @@
+# Base image
 FROM node:18-alpine
+# Set the working directory
 WORKDIR /usr/src/app
+#Copy dependencies first (Optimization/Caching)
 COPY package.json ./
+# Install dependencies
 RUN npm install -y
+# Copy the rest of the source code (after npm install)
 COPY . .
+# Document the port
 EXPOSE 3000
+# The execution command
 CMD ["node", "server.js"]
 
