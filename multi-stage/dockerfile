@@ -18,3 +18,18 @@ FROM alpine:latest
 WORKDIR /root/
 COPY --from=builder /app/myapp .
 CMD ["./myapp"]
+
+#output
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/multi-stage$ docker images
+# REPOSITORY   TAG           IMAGE ID       CREATED          SIZE
+# <none>       <none>        73dde70fdab5   35 seconds ago   249MB
+# hari         latest        9bc21bba0e8a   35 seconds ago   10.2MB
+# alpine       latest        e7b39c54cdec   3 weeks ago      8.44MB
+# golang       1.21-alpine   c2321c7cf721   17 months ago    222MB
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/multi-stage$
+
+# FINAL output
+
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/multi-stage$ docker run hari
+# Hello! This is a secure, multi-stage Go binary running on Alpine!
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/multi-stage$
