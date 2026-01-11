@@ -1,3 +1,13 @@
+# QUESTION2
+# The Base: Use python:3.9-alpine.
+# The Metadata: Add a LABEL that sets the developer to your name.
+# The Environment: Create an ENV variable called DEPT_NAME with a default value of "General".
+# The Build Logic: Create an ARG variable called BUILD_VERSION.
+# The App Code: * Create a file named greet.py.
+# It should print: "Hello from [DEPT_NAME] department. Running version [BUILD_VERSION]."
+# Note: Use os.getenv for the ENV and a simple string replacement or file write for the ARG.
+# The Execution: Set the WORKDIR to /app and make sure the script runs when the container starts.
+
 FROM python:3.9-alpine
 LABEL developer = "harishreddy"
 #LABEL Description = "Level 1 Example 2 - Environment Variables"
