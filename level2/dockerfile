@@ -1,0 +1,11 @@
+FROM python:3.9-alpine
+LABEL developer = "harishreddy"
+#LABEL Description = "Level 1 Example 2 - Environment Variables"
+ENV DEPT_NAME = "General"
+# ARG is for build-time
+ARG BUILD_VERSION
+# PRO TIP: We move the ARG value into an ENV so the app can see it later
+ENV Version=$BUILD_VERSION
+WORKDIR /app
+COPY greet.py
+CMD["python", "greet.py"]
