@@ -19,3 +19,20 @@ ENV Version=$BUILD_VERSION
 WORKDIR /app
 COPY greet.py .
 CMD ["python", "greet.py"]
+
+# output of the code
+
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/level2$ docker run --name harish -d greeter-app
+# ccbdaba1b97f557f9d86f7b25870838b51e62e4bc08859b4a75fbb75431f9aa3
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/level2$ docker ps
+# CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/level2$ docker ps -a
+# CONTAINER ID   IMAGE         COMMAND             CREATED         STATUS                     PORTS     NAMES
+# ccbdaba1b97f   greeter-app   "python greet.py"   8 seconds ago   Exited (0) 7 seconds ago             harish
+
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/level2$ docker run greeter-app
+# Hello from = General department. Running version 0.0.0.
+
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/level2$ docker run -e DEPT_NAME="Marketing" greeter-app
+# Hello from Marketing department. Running version 0.0.0.
+# ubuntu@ip-172-31-25-105:~/DOCKER-PRACTICE/level2$
