@@ -1,3 +1,5 @@
+#Secure the container by switching from root to a specific USER.
+
 # 1. The Setup: Most official images (like node) come with a pre-created user for safety. In the node image, that user is named node.
 # 2. Your Goal: Write a Dockerfile that:
 # Starts from node:18-alpine.
